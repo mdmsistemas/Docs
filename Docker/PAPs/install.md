@@ -39,33 +39,31 @@ wsl --install -d Ubuntu
 
 Já dentro do terminal do container, executar os seguintes comandos, um após o outro, seguindo esta ordem:
 ```
-sudo apt-get update
+sudo apt update
 ```
 ```
-sudo apt-get install \
-    ca-certificates \
-    curl \
-    gnupg \
-    lsb-release
+sudo apt install --no-install-recommends apt-transport-https ca-certificates curl gnupg2
 ```
 ```
-sudo mkdir -p /etc/apt/keyrings
+source /etc/os-release
 ```
 ```
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+curl -fsSL https://download.docker.com/linux/${ID}/gpg | sudo apt-key add -
 ```
+```
+echo "deb [arch=amd64] https://download.docker.com/linux/${ID} ${VERSION_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/docker.list
+```
+
 
 ### 2.2 - Instalar a engine do Docker
 
 Ainda dentro do terminal do container, executar os seguintes comandos, um após o outro, seguindo esta ordem:
 
 ```
-sudo apt-get update
+sudo apt update
 ```
 ```
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 ```
 sudo service docker start
