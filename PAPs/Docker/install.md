@@ -13,3 +13,7 @@ Baixe o docker no endereço: https://www.docker.com/
 
 ![](./images/install-02.jpg)
 
+#### 2.3 - Reiniciar quando solicitado.
+
+![](./images/install-03.jpg)
+
