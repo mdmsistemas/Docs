@@ -36,3 +36,10 @@ sudo nano init-wsl
 service docker start
 docker start redis
 ```
+
+Salvar o arquivo com Ctrl + O, Sair do editor com Ctrl + X
+
+### 3.4 - Tornar o script executável com o seguinte comando:
+```
+sudo chmod +x /etc/init-wsl
+```
