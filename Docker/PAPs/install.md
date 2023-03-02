@@ -94,3 +94,12 @@ sudo docker ps -a
 Caso tenha tudo dado certo, será exibido uma listagem vazia dos conteiners em execução, similar a:
 
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+# Troubleshooting
+
+Erro "Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?"
+
+```
+sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
+sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+```
