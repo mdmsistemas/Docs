@@ -1,6 +1,8 @@
 # Coletor vibração
 ## Output (Anaq --> Gerente Rotas)
 
+Campos a serem adicionados pelo anaq aparecem em negrito.
+
 ### 1 - Formato do arquivo json:
 
 Nome       |  Tipo | Descrição
@@ -12,7 +14,7 @@ userExecRoute | array | Ver tabela 1.1
 monitoredPoints | array | Ver tabela 1.2
 isFinished | boolean | Indica se a rota foi finalizada
 tdmsBase64 | string | Conteúdo do arquivo TDMS gerador na coleta,<br/>convertido para base64.<br/>**Recomendo que seja removido para que a resposta fique mais leve.**
-recordId | string | Id do registro gerado pelo Anaq
+**recordId** | **string** | **Id do registro gerado pelo Anaq**
 
 #### 1.1 - Detalhes do array "userExecRoute"
 
@@ -41,4 +43,4 @@ userExecRouteId | string | Id do UsuarioExecutaRota
 systemId | string | Id do Sistema 
 dateTime | Date (ISO8601) | Data e hora da leitura do ponto monitorado
 state | int | O estado da leitura do ponto<br/>(0 - Desligado, 1 - OK, 2 - Em manutenção)
-recordedSignalId | string | Id do sinal gravador registro gerado pelo Anaq
+**recordedSignalId** | **string** | **Id do sinal gravador registro gerado pelo Anaq**
