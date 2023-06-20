@@ -11,6 +11,7 @@ name       | string | Nome da rota
 userExecRoute | array | Ver tabela 1.1
 monitoredPoints | array | Ver tabela 1.2
 isFinished | boolean | Indica se a rota foi finalizada
+tdmsBase64 | string | Conteúdo do arquivo TDMS gerador na coleta,<br/>convertido para base64.
 
 #### 1.1 - Detalhes do array "userExecRoute"
 
@@ -38,4 +39,4 @@ id | string | Id do Ponto Monitorado
 userExecRouteId | string | Id do UsuarioExecutaRota
 systemId | string | Id do Sistema 
 dateTime | Date (ISO8601) | Data e hora da leitura do ponto monitorado
-state | int | O estado da leitura do ponto (0 - Desligado, 1 - OK, 2 - Em manutenção)
+state | int | O estado da leitura do ponto<br/>(0 - Desligado, 1 - OK, 2 - Em manutenção)
