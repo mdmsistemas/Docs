@@ -48,57 +48,6 @@ Deverá exibir uma mensagem similiar a:
 * Ubuntu    Running         2
 ```
 
-## 2 - Instalando o Docker
-
-### 2.1 - Preparando o repositório
-
-Já dentro do terminal do container, executar os seguintes comandos, um após o outro, seguindo esta ordem:
-```
-sudo apt update
-```
-```
-sudo apt install --no-install-recommends apt-transport-https ca-certificates curl gnupg2
-```
-```
-source /etc/os-release
-```
-```
-curl -fsSL https://download.docker.com/linux/${ID}/gpg | sudo apt-key add -
-```
-```
-echo "deb [arch=amd64] https://download.docker.com/linux/${ID} ${VERSION_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/docker.list
-```
-
-
-### 2.2 - Instalar a engine do Docker
-
-Ainda dentro do terminal do container, executar os seguintes comandos, um após o outro, seguindo esta ordem:
-
-```
-sudo apt update
-```
-```
-sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
-```
-```
-sudo service docker start
-```
-
-#### 2.3 - Verificação
-
-Executar o comando:
-```
-sudo docker ps -a
-```
-
-Caso tenha tudo dado certo, será exibido uma listagem vazia dos conteiners em execução, similar a:
-
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-
-# Troubleshooting
-
-Erro "Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?"
-
 ```
 sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
 sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
