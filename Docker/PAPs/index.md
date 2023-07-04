@@ -11,5 +11,13 @@ Se estiver no Linux, comece daqui.
 
 ### Instalação Online
 
-### [Instalação do Docker online](install_docker_online.md)
-### [Recuperando um container online](container_online.md)
+### [Instalação online do Docker](install_docker_online.md)
+### [Recuperação online de um container](container_online.md)
+
+### Instalação Offline
+
+### [Instalação offline do Docker](install_docker_offline.md)
+### [Recuperação offline de um container](container_offline.md)
+
+### Opcional: Executar o docker sem sudo
+### [Executar docker sem sudo](docker_without_sudo.md)
