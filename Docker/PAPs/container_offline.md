@@ -22,4 +22,4 @@ Onde:\
 docker load -i redis-alpine.docker
 ```
 4 - Execute o container com o comando docker run. Uma explicação mais detalhada do docker run pode ser vista em:
-#### [Recuperação de um container](../container_online.md)
+#### [Recuperação de um container](container_online.md)
