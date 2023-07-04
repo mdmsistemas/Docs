@@ -5,12 +5,13 @@ Para recuperar um container do docker de forma online, utilizamos o comando dock
 Exemplo de recuperação do container redis:
 
 ```
-docker run --name redis -p 6379:6379 redis:alpine
+docker run --name redis --restart always -p 6379:6379 redis:alpine
 ```
 
 Onde:
 
 **--name redis:** Define o nome do container para redis. Caso o nome não seja definido, o docker definirá um nome aleatório para o container (não recomendável).<br/><br/>
+**--restart always:** O container sempre será iniciado automaticamente quando o docker foi iniciado com o Sistema Operacional.
 **-p 6379:6379:** Mapeia a porta 6379 do interior do container para a porta 6379 exterior ao container.<br/><br/>
 **redis:alpine:** O nome da imagem no repositório docker hub.
 
